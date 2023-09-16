@@ -1,0 +1,232 @@
+
+.sig_main1 {
+    width: 100%;
+    float: left;
+    background-color: orange;
+    height:100vh;
+}
+
+.sig_write {
+    width: 40%;
+    float: left;
+}
+
+.sig_write h1 {
+    font-size: 40px;
+    color: white;
+  
+    margin-top: 250px;
+    margin-left: 63px;
+    width: 90%;
+    padding-left:25px;
+}
+
+.sig_write p {
+    font-size: 20px;
+    color: white;
+    
+    margin-top: 60px;
+    margin-left: 300px;
+    width: 370px;
+}
+
+.sig_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 60%;
+    float: left;
+}
+
+.sig_container fieldset {
+    border: none;
+}
+
+.sig_card1 {
+    background-color: #ffffff;
+    box-shadow: 0px 5px 10px green;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 0px;
+    height: 48%
+        /* margin-right: 300px; */
+}
+
+.sig_h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 25px;
+   
+    text-transform: capitalize;
+    color: orange;
+    display: flex;
+    justify-content: center;
+
+}
+
+.sig_qsn{
+    display: flex;
+    justify-content: center;
+    color: orange;
+    font-size: 15px;
+    opacity: 0.7;
+}
+.sig_qsn a{
+    font-size: 15px;
+    font-weight:700;
+    color: green;
+}
+.lebel_name{
+    font-size: 20px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.sig_input-field1 {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+        border-radius: 4px;
+    box-shadow: 0px 2px 2px rgb(183, 183, 196);
+    /* height: 20px; */
+    border: 2px solid orange;
+    margin-top: 20px;
+}
+
+
+.sig_inline {
+    margin-right: 5px;
+}
+
+.sig_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.sig_submit-button {
+    width: 50%;
+    background-color: orange;
+  
+    color: white;
+    border-radius: 25px;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+   
+    height: 35px;
+    border: 2px solid orange;
+}
+
+.sig_submit-button:hover {
+    color: white;
+    background-color: rgb(251, 134, 8);
+}
+
+@media (max-width: 1250px) {
+.sig_card1{
+    height: 28%;
+    margin-top: -600px;
+}
+
+.sig_write {
+    width: 100%;
+    float: left;
+}
+
+
+
+.sig_write p {
+    font-size: 20px;
+    color: white;
+   
+    margin-top: 60px;
+    margin-left: 300px;
+    width: 370px;
+}
+
+.sig_container {
+    
+    width: 100%;
+    float: left;
+}
+.sig_main{
+
+height:100vh;}
+
+}
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    .sig_card1 {
+        width: 90%;
+        max-width: none;
+        margin-top: -400px;;
+    }
+
+    .sig_write {
+        width: 100%;
+        float: left;
+    }
+
+    .sig_write h1 {
+        font-size: 35px;
+        margin-top: 150px;
+        margin-left: 10px;
+    }
+
+    .sig_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        float: left;
+    }
+
+    .sig_write p {
+        margin-top: 60px;
+        margin-left: 50px;
+        width: 300px;
+    }
+
+    .sig_card1 {
+         height:30%;
+        width: 70%;
+    }
+}
+
+
+
+@media (max-width: 350px) {
+    .sig_write h1 {
+        font-size: 25px;
+        margin-top: 100px;
+        margin-left: 15px;
+    }
+
+    .sig_write p {
+        font-size: 14px;
+        margin-top: 40px;
+        margin-left: 20px;
+        width: 90%;
+    }
+
+    .sig_card1 {
+        width: 88%;
+        max-width: none;
+        margin-top: -300px;
+        padding: 6px;
+        height:35%;
+    }
+    .sig_qsn{
+        
+        font-size: 13px;
+    
+    }
+   
+}
