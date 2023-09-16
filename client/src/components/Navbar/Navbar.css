@@ -1,0 +1,163 @@
+
+.nav-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 60px;
+    padding-top: 15px ;
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    background-color: white;
+    border-bottom: 2px solid orange;
+    }
+  
+ 
+  
+    .nav-con a{
+  padding-right: 2rem;  
+  }
+    nav a {
+    font-weight:bolder;
+    font-size: medium;
+    margin:10px;
+    color: green;
+    text-decoration: none;
+    text-transform: uppercase;
+  
+   }
+  
+   nav a:hover{
+    color: rgb(72, 170, 72);
+   }
+    
+   .nav_btn1{
+    /* border:3px solid orange; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin-left: 10px; 
+      padding-left: 20px; 
+     width:110px;
+   border: none;
+     background-color: orange;
+     
+  
+  }
+  .nav_btn1 a{
+    color: white;
+    
+  
+  }
+    
+  
+  /* .nav-nav a:hover{
+   
+    color:orange;
+  } */
+  
+  .nav_btn1 a:hover{
+    color: rgb(72, 170, 72);
+    /* background-color: white; */
+  }
+  
+  
+    
+    
+    .nav-header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background:transparent;
+    border: none;
+    outline: none;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+   
+    }
+    
+    .nav-header div,
+    nav {
+    display: flex;
+    align-items: right;
+    }
+    
+    @media only screen and (max-width: 1024px) {
+    .nav-header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    }
+    .nav-header nav {
+      position: fixed;
+      top: -100vh;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction:row;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color:orange;
+      transition: 1s;
+  }
+  
+  .nav-header .responsive_nav {
+      transform: translateY(100vh);
+      flex-direction: column;
+      padding-left:50px;
+  }
+  
+  .responsive_nav a{
+    color:white;
+  }
+  
+  
+  
+  
+  nav .nav-close-btn .nav_btn1 {
+     position: absolute;
+      top: 2rem;
+      right: 2rem;
+      
+  }
+  
+  .nav_btn1{
+    width: 200px;
+  }
+  .nav-con  {
+    flex-direction: column;
+    
+    gap: 3rem;
+   
+    
+  }
+  .nav-con a{
+    font-size: 25px;
+    
+  }
+  }
+    @media only screen and (max-width: 400px) {
+    
+   
+  .responsive_nav a{
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+   .navbar_btndiv button{
+    width:100px;
+  } 
+  
+  
+  
+  
+  
+  }
