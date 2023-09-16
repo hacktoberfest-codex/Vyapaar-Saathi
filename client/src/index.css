@@ -1,0 +1,12 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;}
+  :root {
+  --mainColor: #7c247f;
+  --mainColorLight: #304598;
+  --secondaryColor: #0c1d69;
+  --textColor: #eee;
+  }
