@@ -1,6 +1,7 @@
 import React from 'react';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
+import Botimg from '../../assets/bot.png'
 
 const HelpAs = () => {
   // const [username, setUsername] = useState('');
@@ -101,7 +102,7 @@ const HelpAs = () => {
   };
 
   const config = {
-    botAvatar: 'img.png',
+    botAvatar: Botimg,
     floating: true,
   };
 
@@ -109,7 +110,7 @@ const HelpAs = () => {
     <div className="App">
       <ThemeProvider theme={theme}>
         <ChatBot
-          headerTitle="GeekBot"
+          headerTitle="Helping Assistent"
           steps={steps}
           {...config}
         />
