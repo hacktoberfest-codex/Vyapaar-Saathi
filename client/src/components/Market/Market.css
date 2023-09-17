@@ -279,3 +279,12 @@ margin-right: 60px;
 .card:hover {
   transform: scale(1.05); 
 }
+
+input[type=radio]{
+  display: none;
+}
+
+.star{
+  cursor: pointer;
+  
+}

@@ -5,7 +5,7 @@ import samImg from '../../assets/member2.png'
 import sohanImg from '../../assets/member3.jpg'
 import pritamImg from '../../assets/member4.jpg'
 import twImg from '../../assets/member5.jpg'
-
+import sumImg from '../../assets/member6.jpeg'
 const About = () => {
   const sdata=[
     {
@@ -18,7 +18,7 @@ const About = () => {
     },
     {
         name:"Sumit Saha ",
-        imgsrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg3es-4GmQGB4yQS9d7rywUovw5h1agLFMCJZwEPKNIw&s",
+        imgsrc:sumImg,
         branch:"CSE",
         year:"3rd Year",
         role:" Front End developer",

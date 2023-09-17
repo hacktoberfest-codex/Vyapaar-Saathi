@@ -2,9 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import hwimg from "../../assets/hwb_img.png"
 import './Market.css';
+import { FaStar } from 'react-icons/fa';
 
 function Market() {
   const [marketData, setMarketData] = useState([]);
+  const [rating,setRating]=useState(null);
+  const [hover,setHover]=useState(null);
    const [usermessage, setUserMessage] = useState({
     textMessage:'',
     email: '',
@@ -64,6 +67,8 @@ function Market() {
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
+
+
   return (
     <div className="market_main">
       <div className="cards-container">
@@ -71,7 +76,24 @@ function Market() {
           <div className="card" key={index}>
             <div className='card_body'>
               <div className='market_img'>
-                <img src={hwimg} alt="server_fault"/>
+                <img src={hwimg} alt="server_fault"/><br></br>
+                {[...Array(5)].map((star,i)=>{
+                  const currentRating=i+1;
+                  return (
+                    <label>
+                      <input type='radio'
+                      name='rating'
+                      value={currentRating}
+                      onClick={()=>setRating(currentRating)} />
+                      <FaStar
+                       className='star'
+                        size={25}
+                        color={currentRating<=(hover||rating)?"#ffc107":"#e4e5e9"}
+                        onMouseEnter={()=>setHover(currentRating)}
+                        onMouseLeave={()=>setHover(null)} />
+                    </label>
+                  )
+                })}
               </div>
               <div className='carditems'>
                 <p><span className='dec'>Name: </span><span className='text_span'>&nbsp;{item.name}</span></p>
@@ -80,9 +102,9 @@ function Market() {
                 <p><span className='dec'>Address: </span><span className='text_span1'>{item.state},{item.city},{item.pincode}</span></p>
           
                 <p><span className='dec'>Time: </span><span className='text_span'>10AM-6PM</span></p>
-            <input type='text' name='textMessage' placeholder='Add Instruction' className='input-box'  value={usermessage.textMessage} onChange={handleMessage}/>
-            <input type='email' name='email'placeholder='Enter email' className='input-box' value={usermessage.email} onChange={handleMessage} />
-            <input type='phone' name='phone'placeholder='Enter contact no' className='input-box'  value={usermessage.phone} onChange={handleMessage }/>
+            <input type='text' name='textMessage' placeholder='Add Instruction' className='input-box'  onChange={handleMessage}/>
+            <input type='email' name='email'placeholder='Enter email' className='input-box'  onChange={handleMessage} />
+            <input type='phone' name='phone'placeholder='Enter contact no' className='input-box'   onChange={handleMessage }/>
             <button className="submit-button" onClick={submitMessage}>
               Submit
             </button>
@@ -96,3 +118,7 @@ function Market() {
 }
 
 export default Market;
+
+
+
+
