@@ -4,6 +4,14 @@ import hwimg from "../../assets/hwb_img.png"
 import './Market.css';
 import { FaStar } from 'react-icons/fa';
 
+import haw1 from '../../assets/haw1.jpg'
+import haw2 from '../../assets/haw2.jpg'
+import haw3 from '../../assets/haw3.jpg'
+import haw4 from '../../assets/haw4.jpg'
+import haw5 from '../../assets/haw5.jpg'
+import haw6 from '../../assets/haw6.jpg'
+import haw7 from '../../assets/haw7.jpg'
+
 function Market() {
   const [marketData, setMarketData] = useState([]);
   const [rating,setRating]=useState(null);
@@ -14,7 +22,7 @@ function Market() {
     phone: '',
      });
 
-   
+     const pictures=[haw1,haw2,haw3,haw4,haw5,haw6,haw7,hwimg];
 
      let name,value;
   const handleMessage=(e)=>{
@@ -78,7 +86,10 @@ function Market() {
           <div className="card" key={index}>
             <div className='card_body'>
               <div className='market_img'>
-                <img src={hwimg} alt="server_fault"/><br></br>
+            
+
+                <img src={pictures[index]} alt="server_fault"/><br></br>
+         
                 {[...Array(5)].map((star,i)=>{
                   const currentRating=i+1;
                   return (
