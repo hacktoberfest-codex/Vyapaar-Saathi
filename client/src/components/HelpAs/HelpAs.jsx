@@ -52,40 +52,13 @@ const HelpAs = () => {
     },
     {
       id: 'help',
-      message: 'Are you a hawker in need of assistance?',
-      trigger: 'hawkerOptions',
+      message: 'Contact to the admin no :6295000285',
+      end:true,
     },
-    {
-      id: 'hawkerOptions',
-      options: [
-        { value: 'yes', label: 'Yes', trigger: 'providePhoneNumber' },
-        { value: 'no', label: 'No', trigger: 'hawkerResolution' }, // Changed trigger to 'hawkerResolution'
-      ],
-    },
-    {
-      id: 'providePhoneNumber',
-      message: 'Please provide your phone number so we can assist you further.',
-      user: true,
-      trigger: 'hawkerSolved',
-    },
-    {
-      id: 'hawkerSolved',
-      message: 'Great! We will contact you soon. Is your issue resolved?',
-      trigger: 'hawkerResolution',
-    },
-    {
-      id: 'hawkerResolution',
-      options: [
-        { value: 'yes', label: 'Yes', end: true }, // End the conversation if the issue is resolved
-        { value: 'no', label: 'No', trigger: 'provideEmail' },
-      ],
-    },
-    {
-      id: 'provideEmail',
-      message: 'Please provide your email address so we can assist you via email.',
-      user: true,
-      end: true,
-    },
+ 
+   
+   
+
   ];
 
   const theme = {
