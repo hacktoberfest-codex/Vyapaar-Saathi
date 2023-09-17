@@ -1,0 +1,138 @@
+
+.about_main {
+   
+    background: linear-gradient(to bottom, orange,rgb(239, 204, 140), green);
+
+    padding: 20px;
+    width:100%;
+    height:auto;
+}
+
+.about_h1{
+font-size: 70px;
+/* font-family: 'Montserrat', sans-serif; */
+margin-top: 50px;
+text-transform: uppercase;
+word-spacing: 20px;
+color: white;
+display: flex;
+justify-content: center;
+
+}
+
+.about_cards {
+display: flex;
+flex-wrap: wrap;
+justify-content: center; 
+
+
+}
+
+.about_card {
+background-color: white;
+  border-radius: 15px;
+box-shadow: 10px 10px 10px rgba(0, 36, 128, 0.4);
+margin: 10px; 
+width: calc(33.33% - 150px);
+padding: 20px;
+box-sizing: border-box;
+transition: transform 0.3s ease-in-out;
+text-align: center;
+height: 330px;
+margin-left: 65px;
+margin-bottom: 100px;
+margin-top: 50px;
+
+}  
+.about_card:hover {
+transform: translateY(-7px);
+box-shadow: 0 0 35px#1e9bff;
+}
+
+.about_cardimg {
+height: 130px;
+width:130px;
+border-radius: 50%;
+transition: transform 0.3s ease-in-out;
+
+}
+.about_cardimg:hover{
+transform: translateY(-7px);
+}
+
+.about_info {
+padding: 10px 0;
+/* font-family: 'Montserrat', sans-serif; */
+
+}
+
+.about_name {
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 5px;
+/* font-family: 'Montserrat', sans-serif; */
+
+
+}
+
+.about_branch {
+font-size: 16px;
+color: rgb(87, 74, 74);
+margin-bottom: 5px;
+/* font-family: 'Montserrat', sans-serif; */
+
+}
+
+.about_year {
+font-size: 16px;
+color: rgb(87, 74, 74);
+margin-bottom: 5px;
+/* font-family: 'Montserrat', sans-serif; */
+
+}
+
+.about_role {
+font-size: 16px;
+color: orange;
+margin-bottom: 10px;
+/* font-family: 'Montserrat', sans-serif; */
+
+}
+
+.about_card a {
+text-decoration: none;
+color: green;
+font-weight: bold;
+transition: color 0.2s;
+}
+
+.about_card a:hover {
+color: #be8382;
+}
+
+@media (max-width: 800px) {
+.about_card {
+width: calc(50% - 20px);
+}
+
+
+.about_card{
+margin-left: 10px;
+}
+
+
+}
+
+@media (max-width: 480px) {
+.about_card {
+width: 100%;
+}
+.about_h1{
+font-size: 38px;
+word-spacing: 10px;
+}
+
+.about_card{
+margin-left: 10px;
+}
+}
