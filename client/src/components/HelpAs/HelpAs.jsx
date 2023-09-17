@@ -23,25 +23,38 @@ const HelpAs = () => {
     {
       id: '3',
       message: `Hi {previousValue}, how can I help you?`,
-      trigger: '4',
+      trigger: 'mainMenu',
     },
     {
-      id: '4',
+      id: 'mainMenu',
       options: [
-        { value: 'products', label: 'Our Products', trigger: 'productsInfo' },
-        { value: 'pricing', label: 'Pricing', trigger: 'pricingInfo' },
+        { value: 'products', label: 'Products?', trigger: 'productsInfo' },
+        { value: 'pricing', label: 'Pricing?', trigger: 'pricingInfo' },
         { value: 'help', label: 'Help', trigger: 'helpInfo' },
+        { value: 'message', label: 'Can\'t Send Message?', trigger: 'messageInfo' },
+        { value: 'order', label: 'Can\'t Place an Order?', trigger: 'orderInfo' },
+        { value: 'account_issue', label: 'Issue not solved?', trigger: 'accountIssueOptions' },
       ],
+    },
+    {
+      id: 'orderInfo',
+      message: 'To place an order, please make sure you are logged in and have an account in Vyapaar Saathi.',
+      trigger: 'mainMenu',
+    },
+    {
+      id: 'messageInfo',
+      message: 'To send a message, ensure you are logged in and have an account in Vyapaar Saathi.',
+      trigger: 'mainMenu',
     },
     {
       id: 'productsInfo',
       message: 'We offer a wide range of products. You can easily contact hawkers in the chat for pricing and placing orders.',
-      trigger: 'backToMainMenu', // Change this to a unique value for a different path
+      trigger: 'mainMenu',
     },
     {
       id: 'pricingInfo',
-      message: 'Our pricing plans vary based on your needs. You can easily inquire about pricing through our chat app.',
-      trigger: 'backToMainMenu', // Change this to a unique value for a different path
+      message: 'Our pricing plans vary based on your needs. You can inquire about pricing through our chat app by providing your buying details to the hawkers.',
+      trigger: 'mainMenu',
     },
     {
       id: 'helpInfo',
@@ -53,7 +66,7 @@ const HelpAs = () => {
       options: [
         { value: 'solved', label: 'Problem Solved', trigger: 'solvedAction' },
         { value: 'not_solved', label: 'Email Support', trigger: 'emailSupport' },
-        { value: 'back_to_main', label: 'Back to Main Menu', trigger: '4' }, // Go back to the main menu
+        { value: 'back_to_main', label: 'Back to Main Menu', trigger: 'mainMenu' },
       ],
     },
     {
@@ -66,12 +79,32 @@ const HelpAs = () => {
       message: 'Please send an email to hardcoder111@gmail.com for further assistance. Our support team will get back to you shortly.',
       end: true,
     },
+    // Additional account issue handling steps
     {
-      id: 'backToMainMenu',
-      message: 'Going back to the main menu...',
-      trigger: '4', // Go back to the main menu
+      id: 'accountIssueOptions',
+      options: [
+        { value: 'yes', label: 'Yes', trigger: 'accountIssueHelp' },
+        { value: 'no', label: 'No', trigger: 'mainMenu' },
+      ],
+    },
+    {
+      id: 'accountIssueHelp',
+      message: 'Please describe the issue you are facing with your account, and we will assist you further.',
+      trigger: 'waitForUserInput',
+    },
+    {
+      id: 'waitForUserInput',
+      user: true,
+      trigger: 'accountIssueConfirmation',
+    },
+    {
+      id: 'accountIssueConfirmation',
+      message: 'Thank you for providing the information. Our support team will investigate the issue and get back to you.',
+      end: true,
     },
   ];
+  
+  
   
   const theme = {
     background: '#C9FF8F',

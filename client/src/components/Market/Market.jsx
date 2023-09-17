@@ -14,6 +14,8 @@ function Market() {
     phone: '',
      });
 
+   
+
      let name,value;
   const handleMessage=(e)=>{
     name=e.target.name;
