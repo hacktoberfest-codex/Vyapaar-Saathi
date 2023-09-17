@@ -4,12 +4,10 @@ import { ThemeProvider } from 'styled-components';
 import Botimg from '../../assets/bot.png'
 
 const HelpAs = () => {
-  // const [username, setUsername] = useState('');
-
   const steps = [
     {
       id: '0',
-      message: 'Hey Geek!',
+      message: 'Hey Vyaparies!',
       trigger: '1',
     },
     {
@@ -31,9 +29,9 @@ const HelpAs = () => {
       id: '4',
       options: [
         { value: 'Read About us', label: 'Read About us', trigger: 'read about us' },
-        { value: 'search hawklers', label: 'Search hawkers', trigger: 'search hawkers' },
+        { value: 'search hawkers', label: 'Search hawkers', trigger: 'search hawkers' },
         { value: 'view chat', label: 'View chat', trigger: 'view chat' },
-        { value: 'help', label: 'help', trigger: 'help' },
+        { value: 'help', label: 'Help', trigger: 'help' },
         // Add more options as needed
       ],
     },
@@ -61,7 +59,7 @@ const HelpAs = () => {
       id: 'hawkerOptions',
       options: [
         { value: 'yes', label: 'Yes', trigger: 'providePhoneNumber' },
-        { value: 'no', label: 'No', trigger: 'provideEmail' },
+        { value: 'no', label: 'No', trigger: 'hawkerResolution' }, // Changed trigger to 'hawkerResolution'
       ],
     },
     {
@@ -78,7 +76,7 @@ const HelpAs = () => {
     {
       id: 'hawkerResolution',
       options: [
-        { value: 'yes', label: 'Yes' },
+        { value: 'yes', label: 'Yes', end: true }, // End the conversation if the issue is resolved
         { value: 'no', label: 'No', trigger: 'provideEmail' },
       ],
     },
@@ -110,7 +108,7 @@ const HelpAs = () => {
     <div className="App">
       <ThemeProvider theme={theme}>
         <ChatBot
-          headerTitle="Helping Assistent"
+          headerTitle="Helping Assistant"
           steps={steps}
           {...config}
         />
