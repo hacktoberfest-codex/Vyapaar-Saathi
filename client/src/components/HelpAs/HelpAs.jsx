@@ -1,7 +1,7 @@
 import React from 'react';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-import Botimg from '../../assets/bot.png'
+import Botimg from '../../assets/bot.png';
 
 const HelpAs = () => {
   const steps = [
@@ -28,39 +28,51 @@ const HelpAs = () => {
     {
       id: '4',
       options: [
-        { value: 'Read About us', label: 'Read About us', trigger: 'read about us' },
-        { value: 'search hawkers', label: 'Search hawkers', trigger: 'search hawkers' },
-        { value: 'view chat', label: 'View chat', trigger: 'view chat' },
-        { value: 'help', label: 'Help', trigger: 'help' },
-        // Add more options as needed
+        { value: 'products', label: 'Our Products', trigger: 'productsInfo' },
+        { value: 'pricing', label: 'Pricing', trigger: 'pricingInfo' },
+        { value: 'help', label: 'Help', trigger: 'helpInfo' },
       ],
     },
     {
-      id: 'read about us',
-      message: 'You are now reading articles.',
+      id: 'productsInfo',
+      message: 'We offer a wide range of products. You can easily contact hawkers in the chat for pricing and placing orders.',
+      trigger: 'backToMainMenu', // Change this to a unique value for a different path
+    },
+    {
+      id: 'pricingInfo',
+      message: 'Our pricing plans vary based on your needs. You can easily inquire about pricing through our chat app.',
+      trigger: 'backToMainMenu', // Change this to a unique value for a different path
+    },
+    {
+      id: 'helpInfo',
+      message: 'Contact the admin at: 6295000285. If your problem is solved, please click "Problem Solved." If it\'s not solved, click "Email Support."',
+      trigger: 'helpOptions',
+    },
+    {
+      id: 'helpOptions',
+      options: [
+        { value: 'solved', label: 'Problem Solved', trigger: 'solvedAction' },
+        { value: 'not_solved', label: 'Email Support', trigger: 'emailSupport' },
+        { value: 'back_to_main', label: 'Back to Main Menu', trigger: '4' }, // Go back to the main menu
+      ],
+    },
+    {
+      id: 'solvedAction',
+      message: 'Great to hear that your problem is solved! If you have any more questions, feel free to ask.',
       end: true,
     },
     {
-      id: 'search hawkers',
-      message: 'You are now searching for products.',
+      id: 'emailSupport',
+      message: 'Please send an email to hardcoder111@gmail.com for further assistance. Our support team will get back to you shortly.',
       end: true,
     },
     {
-      id: 'view chat',
-      message: 'You are now viewing your orders.',
-      end: true,
+      id: 'backToMainMenu',
+      message: 'Going back to the main menu...',
+      trigger: '4', // Go back to the main menu
     },
-    {
-      id: 'help',
-      message: 'Contact to the admin no :6295000285',
-      end:true,
-    },
- 
-   
-   
-
   ];
-
+  
   const theme = {
     background: '#C9FF8F',
     headerBgColor: '#197B22',

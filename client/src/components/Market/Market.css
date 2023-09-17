@@ -3,9 +3,11 @@
   background: linear-gradient(to bottom, orange,rgb(239, 204, 140), green);
 height: fit-content;  }
 
-
+/* .cards-container{
+  background-color: aliceblue;
+} */
 .card {
-  background-color:rgb(249, 248, 250);
+  background-color:aliceblue;
  
   border: 1px solid #edeaea;
   border-radius: 10px;
@@ -123,6 +125,7 @@ background-color: rgb(24, 162, 24);
   width: 70%;
   float: left;
   padding-left: 30px;
+  
   /* padding-top: 20px; */
 /* margin-bottom: 29px;  } */
 }
@@ -133,6 +136,7 @@ background-color: rgb(24, 162, 24);
 
 .card .input-box{
   width:50%;
+  padding-left: 10px;
   
 
 }
@@ -211,12 +215,15 @@ margin-right: 60px;
   .market_img{
     width: 100%;
     float:left;
-    
+    width: 50%;
+    height: 50%s;
+    margin-top:-50px;
   }
   
   .carditems{
     width: 100%;
     float: left;
+    margin-top: -10px;
      }
 
   .card p {

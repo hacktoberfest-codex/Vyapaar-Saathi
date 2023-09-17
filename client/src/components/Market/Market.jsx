@@ -103,8 +103,8 @@ function Market() {
           
                 <p><span className='dec'>Time: </span><span className='text_span'>10AM-6PM</span></p>
             <input type='text' name='textMessage' placeholder='Add Instruction' className='input-box'  onChange={handleMessage}/>
-            <input type='email' name='email'placeholder='Enter email' className='input-box'  onChange={handleMessage} />
-            <input type='phone' name='phone'placeholder='Enter contact no' className='input-box'   onChange={handleMessage }/>
+            <input type='email' name='email 'placeholder='Enter email' className='input-box'  onChange={handleMessage} />
+            <input type='phone' name='phone' placeholder='Enter contact no' className='input-box'   onChange={handleMessage }/>
             <button className="submit-button" onClick={submitMessage}>
               Submit
             </button>

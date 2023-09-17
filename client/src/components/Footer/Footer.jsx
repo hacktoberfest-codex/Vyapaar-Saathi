@@ -12,7 +12,7 @@ function Footer() {
         <p className="about">
           <span> About the company</span> At InnovateMarket, we are committed to reshaping the hawker-buyer dynamic for the Indian market. Our mission is to forge a frictionless platform that empowers Indian hawkers to flourish in the digital era, all while providing buyers the ease of doorstep delivery. Come be a part of our journey as we transform the way Indian hawkers and buyers connect.
         </p>
-        <div className="icons">
+        <div className="icons menu">
           <a href="https://github.com/Rafikhan19"><i className="fa fa-facebook"><AiFillGithub /></i></a>
           <a href="https://www.linkedin.com/in/khanrafiahmed/"><i className="fa fa-twitter"><AiOutlineLinkedin /></i></a>
           <a href="https://www.linkedin.com/in/khanrafiahmed/"><i className="fa fa-linkedin"><BsFacebook /></i></a>
