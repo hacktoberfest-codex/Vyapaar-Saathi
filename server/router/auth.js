@@ -62,19 +62,19 @@ router.post("/signin",async(req,res)=>{
 
             const isCheck=await bcrypt.compare(password,userCheck.password);
 
-          token= await userCheck.generateAuthToken();
-            console.log(token);
+        //   token= await userCheck.generateAuthToken();
+            // console.log(token);
 
            
 
 
             if(isCheck){
                 res.status(201).json({mssg:"Login succesful"});
-                res.cookie("jwtoken",token,{
-                    expires:new Date(Date.now()+25892000000),
-                    httpOnly:true
+                // res.cookie("jwtoken",token,{
+                //     expires:new Date(Date.now()+25892000000),
+                //     httpOnly:true
     
-                })
+                // })
             }else{
                 res.status(401).json({mssg:"wrong credencials"});
             }

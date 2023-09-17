@@ -28,7 +28,7 @@ return (
         
             <a href="/">Home</a>
             <a href="/Market">Market</a>
-            <a href="/HelpAs">Helping Assistant</a>
+            {/* <a href="/HelpAs">Helping Assistant</a> */}
             <a href="Marketmessage">Chat With Hawkers</a>
             <a href="/About">About Us</a>
             <div className="navbar_btndiv">
